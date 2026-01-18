@@ -68,11 +68,11 @@ Rules enforced:
 ## 🛠️ Tech Stack
 
 - **Framework:** React (Vite)
-- **Language:** JavaScript / TypeScript
-- **Styling:** CSS / Tailwind CSS
-- **State Management:** React Hooks / Context API
+- **Language:** JavaScript
+- **Styling:** CSS
+- **State Management:** React Hooks
 - **Persistence:** Local Storage (mocked)
-- **Build Tool:** Vite
+- **Build in:** VS Code
 
 > No backend is used as per assignment requirements.
 
@@ -80,22 +80,21 @@ Rules enforced:
 
 ## 📂 Project Structure
 
-src/
+ssrc/
 │── components/
-│ ├── BlueprintForm.jsx
-│ ├── ContractForm.jsx
-│ ├── ContractsTable.jsx
+│   ├── BlueprintForm.jsx        # Form to create blueprints
+│   ├── ContractForm.jsx         # Form to create contracts from blueprints
+│   ├── ContractsTable.jsx       # Table displaying all contracts
 │
 │── pages/
-│ ├── Home.jsx
-│ ├── GeneratedContract.jsx
-│ |── Contract.css
-|
-│── App.jsx
-│── App.css
-│── index.js
+│   ├── Home.jsx                 # Landing page
+│   ├── GeneratedContract.jsx    # Display generated contract
+│
+│── Contract.css                 # Styles for contracts
+│── App.jsx                      # Main React component
+│── App.css                      # Global app styles
+│── index.jsx                    # Entry point
 
----
 
 ## ⚙️ Setup Instructions
 
