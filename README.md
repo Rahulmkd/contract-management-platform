@@ -1,16 +1,119 @@
-# React + Vite
+# 📄 Contract Management Platform (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A frontend-based Contract Management Platform built to demonstrate product thinking, UI design, state management, and clean code architecture.
 
-Currently, two official plugins are available:
+The application allows users to create reusable contract blueprints, generate contracts from those blueprints, manage contract lifecycles, and view contracts in a dashboard — all without a backend (mocked/local persistence).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Blueprint Creation
 
-## Expanding the ESLint configuration
+- Create reusable contract templates (Blueprints)
+- Supported field types:
+  - Text
+  - Date
+  - Signature
+  - Checkbox
+- Configure field metadata:
+  - Label
+  - Type
+  - Basic position
+- Blueprint data stored locally (mock persistence)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+### 2. Contract Creation from Blueprint
+
+- Select an existing blueprint
+- Generate a contract inheriting all blueprint fields
+- Fill values for each field
+- Contract data stored locally
+
+---
+
+### 3. Contract Lifecycle Management
+
+Each contract follows a controlled lifecycle:
+
+Created → Approved → Sent → Signed → Locked  
+Revoked (can occur after creation or sending)
+
+Rules enforced:
+
+- No skipping lifecycle steps
+- Locked contracts are read-only
+- Revoked contracts cannot proceed further
+- UI clearly displays current status and available actions
+
+---
+
+### 4. Contract Dashboard
+
+- View all contracts in a table
+- Filter or group contracts by status:
+  - Active
+  - Pending
+  - Signed
+- Table displays:
+  - Contract name
+  - Blueprint name
+  - Status
+  - Created date
+  - Action buttons
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** React (Vite)
+- **Language:** JavaScript / TypeScript
+- **Styling:** CSS / Tailwind CSS
+- **State Management:** React Hooks / Context API
+- **Persistence:** Local Storage (mocked)
+- **Build Tool:** Vite
+
+> No backend is used as per assignment requirements.
+
+---
+
+## 📂 Project Structure
+
+src/
+│── components/
+│ ├── BlueprintForm.jsx
+│ ├── ContractForm.jsx
+│ ├── ContractsTable.jsx
+│
+│── pages/
+│ ├── Home.jsx
+│ ├── GeneratedContract.jsx
+│ |── Contract.css
+|
+│── App.jsx
+│── App.css
+│── index.js
+
+---
+
+## ⚙️ Setup Instructions
+
+Follow the steps below to run the project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/Rahulmkd/contract-management-platform.git
+
+# Navigate into the project directory
+cd contract-management-platform
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+
+The application will run at: http://localhost:5173
+
+```
