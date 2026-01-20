@@ -115,4 +115,5 @@ npm run dev
 
 The application will run at: http://localhost:5173
 
+Live link is: https://cms100.netlify.app/
 ```
